@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>x`
+    <title>Hello, World!</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+     <canvas id="canvas"></canvas>
+
+<div class="control-panel">
+	<div class="title">✨ Squircle Dreams v2 ✨</div>
+
+	<div class="control-group">
+		<label>Squircles Count</label>
+		<div class="slider-container">
+			<input type="range" class="slider" id="count" min="1" max="50" value="15">
+			<div class="value-display" id="countValue">15</div>
+		</div>
+	</div>
+
+	<div class="control-group">
+		<label>Base Size</label>
+		<div class="slider-container">
+			<input type="range" class="slider" id="size" min="10" max="100" value="40">
+			<div class="value-display" id="sizeValue">40</div>
+		</div>
+	</div>
+
+	<div class="control-group">
+		<label>Factor</label>
+		<div class="slider-container">
+			<input type="range" class="slider" id="curve" min="0.2" max="2.0" value="1.2" step="0.1">
+			<div class="value-display" id="curveValue">1.2</div>
+		</div>
+	</div>
+	
+	<div class="control-group">
+		<label>Morph Speed</label>
+		<div class="slider-container">
+			<input type="range" class="slider" id="autoSpeed" min="0" max="5" value="2.0" step="0.1">
+			<div class="value-display" id="autoSpeedValue">2.0</div>
+		</div>
+	</div>
+
+	<div class="control-group">
+		<label>Opacity</label>
+		<div class="slider-container">
+			<input type="range" class="slider" id="opacity" min="0.1" max="1" value="0.8" step="0.1">
+			<div class="value-display" id="opacityValue">0.8</div>
+		</div>
+	</div>
+	
+	<div class="control-group">
+		<label>Motion Speed</label>
+		<div class="slider-container">
+			<input type="range" class="slider" id="speed" min="0.1" max="3" value="1" step="0.1">
+			<div class="value-display" id="speedValue">1.0</div>
+		</div>
+	</div>
+
+	<div class="control-group">
+		<label>Primary Color</label>
+		<input type="color" class="color-input" id="color1" value="#6366f1">
+	</div>
+
+	<div class="control-group">
+		<label>Secondary Color</label>
+		<input type="color" class="color-input" id="color2" value="#ec4899">
+	</div>
+
+	<div class="control-group">
+		<button class="button" onclick="randomizeAll()" style="margin-bottom: 10px;">🎲 Randomize All</button>
+		<button class="button" onclick="randomizeColors()" style="margin-bottom: 10px;">🌈 Random Colors</button>
+		<button class="button" onclick="resetToDefaults()">Reset to Magic</button>
+	</div>
+</div>
+
+<div class="stats">
+	<div>FPS: <span id="fps">60</span></div>
+	<div>Active Squircles: <span id="activeCount">15</span></div>
+</div>
+
+      <script src="script.js"></script>
+  </body>
+</html>
