@@ -165,3 +165,47 @@ body {
 	font-size: 12px;
 	animation: float 6s ease-in-out infinite reverse;
 }
+
+body {
+  background-color: #000;
+  display: flex;
+  flex-wrap: wrap;
+  place-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container-loader {
+  --size: 200px;
+  width: var(--size);
+  height: var(--size);
+  position: relative;
+  transform: translateX(-50%);
+  zoom: 0.7;
+
+  .ball {
+    position: absolute;
+    width: calc(var(--size) + var(--i));
+    height: calc(var(--size) + var(--i));
+    background-color: var(--color);
+    border-radius: 50%;
+    animation: move 5s linear infinite both;
+    transform-origin: var(--size);
+    mix-blend-mode: difference;
+    animation-duration: var(--d);
+    filter: blur(28px);
+
+    &:nth-child(even) {
+      animation-direction: reverse;
+    }
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}
